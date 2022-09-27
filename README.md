@@ -1,2 +1,2 @@
 # emby
-some emby servers
+some 
