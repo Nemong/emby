@@ -1,4 +1,4 @@
 #EXTM3U url-tvg="http://epg.51zmt.top:8000/e.xml,https://epg.112114.xyz/pp.xml"
 
-#EXTINF:-1 tvg-id="1" tvg-name="CCTV1" tvg-logo="http://n.ysyz.top:99/buyaolian/cctv1.png" group-title="电信爱上源",CCTV1
+#EXTINF:-1 tvg-id="1" tvg-name="芜湖大司马" 芜湖大司马
 https://live.52sf.ga/douyu/606118
