@@ -1,4 +1,11 @@
 #EXTM3U url-tvg="http://epg.51zmt.top:8000/e.xml,https://epg.112114.xyz/pp.xml"
 
-#EXTINF:-1 tvg-id="1" tvg-name="芜湖大司马" 芜湖大司马
+
+#EXTINF:-1 group-title="斗鱼直播",芜湖大司马
 https://live.52sf.ga/douyu/606118
+#EXTINF:-1 group-title="斗鱼直播",即将有人鱼线的PDD
+https://live.52sf.ga/douyu/101
+#EXTINF:-1 group-title="斗鱼直播",旭旭宝宝
+https://live.52sf.ga/douyu/99999
+#EXTINF:-1 group-title="斗鱼直播",旭旭宝宝斗地主精选
+https://live.52sf.ga/douyu/9804176
