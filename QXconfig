@@ -45,7 +45,6 @@ static=FINAL, direct, proxy, reject, img-url=https://raw.githubusercontent.com/S
 static=GENERAL, HONG KONG¹, HONG KONG², SINGAPORE, JAPAN, UNITED STATES, TAIWAN, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Final.png
 static=GLOBAL MEDIA, 🇸🇬 新加坡 01, 🏴‍☠️ 懒人节点 01, JAPAN, HONG KONG¹, HONG KONG³, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Video.png
 static=TELEGRAM, GENERAL, JAPAN, SINGAPORE, TAIWAN, HONG KONG², HONG KONG³, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png
-; 除了static策略组，其他可以被隐藏，因为会自动完成测速、可用性检测
 available=HONG KONG¹, server-tag-regex=^(?!.*?[\#|D|PL]).*(香港|HK|Hong), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
 available=HONG KONG², resource-tag-regex=prpr, server-tag-regex=\#, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
 available=HONG KONG³, resource-tag-regex=nano, server-tag-regex=香港, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
