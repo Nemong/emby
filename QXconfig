@@ -45,6 +45,7 @@ static=FINAL, direct, proxy, reject, img-url=https://raw.githubusercontent.com/S
 static=GENERAL, HONG KONG¹, HONG KONG², SINGAPORE, JAPAN, UNITED STATES, TAIWAN, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Final.png
 static=GLOBAL MEDIA, 🇸🇬 新加坡 01, 🏴‍☠️ 懒人节点 01, JAPAN, HONG KONG¹, HONG KONG³, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Video.png
 static=TELEGRAM, GENERAL, JAPAN, SINGAPORE, TAIWAN, HONG KONG², HONG KONG³, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png
+
 available=HONG KONG¹, server-tag-regex=^(?!.*?[\#|D|PL]).*(香港|HK|Hong), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
 available=HONG KONG², resource-tag-regex=prpr, server-tag-regex=\#, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
 available=HONG KONG³, resource-tag-regex=nano, server-tag-regex=香港, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
@@ -61,24 +62,26 @@ https://api.prprcloud.life/ss/2428/HkehzQYmxM/noemoji#emoji=2, tag=prpr, img-url
 ###
 [filter_remote]
 https://raw.githubusercontent.com/Nemong/for-own-use/main/ownuse, force-policy=EMBY, update-interval=-1, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Direct/Direct.list#regout=mtalk|.com, tag=修正 (bm7), force-policy=direct, update-interval=-1, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Special.list, tag=Special=修正 (Stick Rules), force-policy=direct, update-interval=-1, opt-parser=false, enabled=false
+https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Special.list#regout=dler, tag=Special=修正 (Stick Rules), force-policy=direct, update-interval=-1, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/AdBlock.list, tag=AdBlock (Stick Rules), force-policy=reject, update-interval=-1, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Speedtest.list#regout=fast, tag=Speedtest (Stick Rules), force-policy=proxy, update-interval=-1, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Direct/Direct.list, tag=修正 (bm7), force-policy=direct, update-interval=-1, opt-parser=true, enabled=false
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AdvertisingLite/AdvertisingLite.list, tag=AdLite (bm7), force-policy=reject, update-interval=-1, opt-parser=false, enabled=false
+https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adblock4limbo.list, tag=毒奶去广告, force-policy=reject, update-interval=-1, opt-parser=true, enabled=false
 
+https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Speedtest.list#regout=fast, tag=Speedtest (Stick Rules), force-policy=proxy, update-interval=-1, opt-parser=true, enabled=false
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Spark/Spark.list, tag=Spark (bm7), force-policy=EMBY, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTube/YouTube.list, tag=YouTube (bm7), force-policy=UNITED STATES, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Google/Google.list, tag=Google (bm7), force-policy=GENERAL, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Microsoft/Microsoft.list, tag=Microsoft (bm7), force-policy=GENERAL, update-interval=-1, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Telegram/Telegram.list, tag=Telegram, force-policy=TELEGRAM, update-interval=-1, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Telegram/Telegram.list, tag=Telegram (bm7), force-policy=TELEGRAM, update-interval=-1, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Netflix/Netflix.list, tag=Netflix(bm7), force-policy=GLOBAL MEDIA, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AmazonPrimeVideo/AmazonPrimeVideo.list, tag=PrimeVideo(bm7), force-policy=UNITED STATES, update-interval=-1, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Twitch/Twitch.list, tag=Twitch, force-policy=EMBY, update-interval=-1, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Steam/Steam.list, tag=Stsam, force-policy=proxy, update-interval=-1, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Epic/Epic.list, tag=Epicgames, force-policy=proxy, update-interval=-1, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/PikPak/PikPak.list, tag=PikPak, force-policy=TELEGRAM, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Twitch/Twitch.list, tag=Twitch (bm7), force-policy=EMBY, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Steam/Steam.list, tag=Stsam (bm7), force-policy=proxy, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Epic/Epic.list, tag=Epicgames (bm7), force-policy=proxy, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/PikPak/PikPak.list, tag=PikPak (bm7), force-policy=TELEGRAM, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GlobalMedia/GlobalMedia.list#regout=y(t.be|outu)|google, tag=Global Media (bm7), force-policy=GLOBAL MEDIA, update-interval=-1, opt-parser=true, enabled=false
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Game/Game.list#regout=.cn, tag=Games, force-policy=GENERAL, update-interval=-1, opt-parser=true, enabled=false
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Game/Game.list#regout=.cn, tag=Games (bm7), force-policy=GENERAL, update-interval=-1, opt-parser=true, enabled=false
 
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/ProxyLite/ProxyLite.list#regout=a(bc|chi|um|nat|ri|rti)|b(bc|cn)|c(ab|ntt|ov)|d(fr|tm)|e(add|bu|rl|ov|stre|sof|leg)|f(fp|ub)|g(are|p)|h(ncd|p|ul|oc)|i(by|mg.j|ps|tch|nten)|jtv|k(\*|ao|-t|em)|l(ln|ym|itu)|m(.co.j|eo|usc)|n(aw|dcl|n.|yt)|r(iot|tm)|s(ica|ndc|.te|kt|tag)|t(hk|tvn|v.a|vb|eles|x.m)|uk-|v(erc|erg|iu|ox-|un), tag=ProxyLite (bm7), force-policy=GENERAL, update-interval=-1, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Mainland.list, tag=Mainland (Stick Rules), force-policy=direct, update-interval=-1, opt-parser=false, enabled=true
@@ -90,14 +93,17 @@ https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Mainlan
 https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/YouTube_remove_ads.plugin, tag=ytbAD_1, update-interval=-1, opt-parser=true, enabled=true
 https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/YouTube_remove_ads_plan_b.plugin, tag=ytbAD_2, update-interval=-1, opt-parser=true, enabled=false
 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/YouTubeAds.conf, tag=ytbAD_3, update-interval=-1, opt-parser=false, enabled=false
+;毒奶去广告
+https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adblock4limbo.conf, tag=毒奶去广告, update-interval=-1, opt-parser=false, enabled=false
+;重定向&去广告
+https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Rewrite/Rewrite.list, tag=Rewrite (Stick Rules), update-interval=-1, opt-parser=false, enabled=true
+
 ;Netflix显示IMDB和豆瓣评分
 https://raw.githubusercontent.com/Orz-3/QuantumultX/master/Netflix_ratings.conf, tag=Netflix rating, update-interval=-1, opt-parser=false, enabled=true
 ;YouTube字幕翻译-免去手动点击自动翻译
 https://raw.githubusercontent.com/Neurogram-R/Quantumult-X/main/snippet/YouTube-Dualsub.snippet, tag=Sub_Translate_YouTube, update-interval=-1, opt-parser=false, enabled=true
 ;解锁Siri搜索和全局搜索
 https://raw.githubusercontent.com/VirgilClyne/iRingo/main/qxrewrite/Siri.qxrewrite, tag= iRingo for Siri & Search, update-interval=-1, opt-parser=false, enabled=true
-;重定向&去广告
-https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Rewrite/Rewrite.list, tag=Rewrite (Stick Rules), update-interval=-1, opt-parser=false, enabled=true
 ;APP破解
 https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/shenshi.js, tag=绅士摄影, update-interval=-1, opt-parser=true, enabled=false
 
@@ -106,6 +112,7 @@ https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/shenshi.js, tag=绅
 
 ###
 [filter_local]
+geoip, CN, direct
 final, FINAL
 
 ###
