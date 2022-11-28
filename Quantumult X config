@@ -1,20 +1,27 @@
 [general]
-profile_img_url =https://raw.githubusercontent.com/Nemong/profile-img/main/3-210GG55128.jpg
-resource_parser_url =https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
 ;network_check_url =http://bing.com
 ;server_check_url =http://www.google.com/generate_204
 ;server_check_user_agent = Agent/1.0
 ;server_check_timeout = 5000
 ;doh_user_agent = Agent/1.0
-;geo_location_checker = http://www.example.com/json/, https://www.example.com/script.js
-running_mode_trigger = filter, filter, LINK_22E171:filter, HONOR_310P6R_5G:all_direct
-dns_exclusion_list = *.cmpassport.com, *.jegotrip.com.cn, *.icitymobile.mobi, id6.me
 ;dns_reject_domain_behavior = loopback
 ;ssid_suspended_list = LINK_22E174, HONOR_310P6R_5G
 ;udp_whitelist = 53, 123, 1900, 80-443
 ;udp_drop_list = 1900, 80
 ;excluded_routes = 192.168.0.0/16, 172.16.0.0/12, 100.64.0.0/10, 10.0.0.0/8
 ;icmp_auto_reply = true
+;geo_location_checker = http://www.example.com/json/, https://www.example.com/script.js
+
+;DNS 排除列表
+;dns_exclusion_list 包含了禁用占位符 IP (240.*) 的域，不在 dns_exclusion_list 中的域都启用了占位符 IP，并打开了 resolve-on-remote 设置。
+;dns exclusion list中的域名将不使用fake-ip方式. 其它域名则全部采用 fake-ip 及远程解析的模式
+dns_exclusion_list = *.lan, cable.auth.com, *.msftconnecttest.com, *.msftncsi.com, network-test.debian.org, detectportal.firefox.com, resolver1.opendns.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, stun.*, global.turn.twilio.com, global.stun.twilio.com, localhost.*.qq.com, *.logon.battlenet.com.cn, *.logon.battle.net, *.blzstatic.cn, music.163.com, *.music.163.com, *.126.net, musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, *.kuwo.cn, api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, *.y.qq.com, streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, *.xiami.com, *.music.migu.cn, music.migu.cn, proxy.golang.org, *.mcdn.bilivideo.cn, *.cmpassport.com, id6.me, open.e.189.cn, mdn.open.wo.cn, opencloud.wostore.cn, auth.wosms.cn, *.jegotrip.com.cn, *.icitymobile.mobi, *.pingan.com.cn, *.cmbchina.com, pool.ntp.org, *.pool.ntp.org, ntp.*.com, time.*.com, ntp?.*.com, time?.*.com, time.*.gov, time.*.edu.cn, *.ntp.org.cn, PDC._msDCS.*.*, DC._msDCS.*.*, GC._msDCS.*.*
+
+profile_img_url =https://raw.githubusercontent.com/Nemong/profile-img/main/3-210GG55128.jpg
+resource_parser_url =https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
+running_mode_trigger = filter, filter, LINK_22E171:filter, HONOR_310P6R_5G:all_direct
+
+
 #
 [dns]
 ;circumvent-ipv4-answer = 127.0.0.1, 0.0.0.0
@@ -25,6 +32,7 @@ no-ipv6
 server = 119.29.29.29
 server = 223.5.5.5
 server = 114.114.114.114
+
 #
 [policy]
 static=EMBY, HONG KONG³, HONG KONG², 🇨🇳 台湾 01, 🇨🇳 台湾 02, 🇸🇬 新加坡 01, 🇸🇬 新加坡 02, 🇸🇬 新加坡 03, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Browser.png
@@ -32,27 +40,28 @@ static=FINAL, direct, proxy, reject, img-url=https://raw.githubusercontent.com/S
 static=GENERAL, HONG KONG¹, HONG KONG², SINGAPORE, JAPAN, UNITED STATES, TAIWAN, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Final.png
 static=GLOBAL MEDIA, 🇸🇬 新加坡 01, 🏴‍☠️ 懒人节点 01, JAPAN, HONG KONG¹, HONG KONG³, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Video.png
 static=TELEGRAM, GENERAL, JAPAN, SINGAPORE, TAIWAN, HONG KONG², HONG KONG³, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png
+
 available=HONG KONG¹, server-tag-regex=^(?!.*?[\#|D|PL]).*(香港|HK|Hong), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
-url-latency-benchmark=HONG KONG², resource-tag-regex=prpr, server-tag-regex=\#, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+available=HONG KONG², resource-tag-regex=prpr, server-tag-regex=\#, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
 available=HONG KONG³, resource-tag-regex=nano, server-tag-regex=香港, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
-url-latency-benchmark=SINGAPORE, server-tag-regex=新加坡|SG|Singapore, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
+available=SINGAPORE, server-tag-regex=新加坡|SG|Singapore, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
 available=JAPAN, server-tag-regex=^(?!.*?[\#|D|PL]).*(日本|JAPAN|JPN), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
 available=UNITED STATES, server-tag-regex=^(?!.*?[\#|D|PL]).*(美国|USA), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
 available=TAIWAN, server-tag-regex=^(?!.*?[\#|D|PL]).*(台湾|TW|Taiwan), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/China.png
+
 #
 [server_remote]
 https://subv3.nanoport.xyz/api/v1/client/subscribe?token=31caebe408414931474e49008866cc1c#emoji=2, tag=nano, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/CCCat.png, update-interval=-1, opt-parser=true, enabled=true
 https://api.prprcloud.life/ss/2428/HkehzQYmxM/noemoji#emoji=2, tag=prpr, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Prpr.png, update-interval=-1, opt-parser=true, enabled=true
+
 #
 [filter_remote]
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AppleMail/AppleMail.list, tag=Apple mail, force-policy=GENERAL, update-interval=-1, opt-parser=false, enabled=false
-https://raw.githubusercontent.com/Semporia/TikTok-Unlock/master/Quantumult-X/TikTok.list, tag=TikTok, force-policy=TAIWAN, update-interval=-1, opt-parser=false, enabled=false
-https://raw.githubusercontent.com/app2smile/rules/master/rule/tieba-ad-qx.list, tag=贴吧屏蔽域名dns查询, force-policy=reject, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/Nemong/emby/main/url?token=GHSAT0AAAAAAB3PW65C5ADJSZOQV2B3QWHQY4CYHBA, tag=Personal, force-policy=EMBY, update-interval=-1, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Direct/Direct.list#regout=mtalk|.com, tag=修正 (bm7), force-policy=direct, update-interval=-1, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Special.list, tag=Special=修正 (Stick Rules), force-policy=direct, update-interval=-1, opt-parser=false, enabled=false
 https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/AdBlock.list, tag=AdBlock (Stick Rules), force-policy=reject, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Speedtest.list#regout=fast, tag=Speedtest (Stick Rules), force-policy=proxy, update-interval=-1, opt-parser=true, enabled=true
+
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Spark/Spark.list, tag=Spark (bm7), force-policy=EMBY, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTube/YouTube.list, tag=YouTube (bm7), force-policy=UNITED STATES, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Google/Google.list, tag=Google (bm7), force-policy=GENERAL, update-interval=-1, opt-parser=false, enabled=true
@@ -61,34 +70,38 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Quant
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Netflix/Netflix.list, tag=Netflix(bm7), force-policy=GLOBAL MEDIA, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AmazonPrimeVideo/AmazonPrimeVideo.list, tag=PrimeVideo(bm7), force-policy=UNITED STATES, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GlobalMedia/GlobalMedia.list#regout=y(t.be|outu)|google, tag=Global Media (bm7), force-policy=GLOBAL MEDIA, update-interval=-1, opt-parser=true, enabled=false
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Facebook/Facebook.list, tag=Meta, force-policy=GENERAL, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Microsoft/Microsoft.list, tag=Microsoft (bm7), force-policy=GENERAL, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Twitch/Twitch.list, tag=Twitch, force-policy=EMBY, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Steam/Steam.list, tag=Stsam, force-policy=proxy, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Epic/Epic.list, tag=Epicgames, force-policy=proxy, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Game/Game.list#regout=.cn, tag=Games, force-policy=GENERAL, update-interval=-1, opt-parser=true, enabled=false
+
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/ProxyLite/ProxyLite.list#regout=a(bc|chi|um|nat|ri|rti)|b(bc|cn)|c(ab|ntt|ov)|d(fr|tm)|e(add|bu|rl|ov|stre|sof|leg)|f(fp|ub)|g(are|p)|h(ncd|p|ul|oc)|i(by|mg.j|ps|tch|nten)|jtv|k(\*|ao|-t|em)|l(ln|ym|itu)|m(.co.j|eo|usc)|n(aw|dcl|n.|yt)|r(iot|tm)|s(ica|ndc|.te|kt|tag)|t(hk|tvn|v.a|vb|eles|x.m)|uk-|v(erc|erg|iu|ox-|un), tag=ProxyLite (bm7), force-policy=GENERAL, update-interval=-1, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Mainland.list, tag=Mainland (Stick Rules), force-policy=direct, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Mainland%20ASN.list, tag=Mainland ASN (Stick Rules), force-policy=direct, update-interval=-1, opt-parser=false, enabled=false
+
 #
 [rewrite_remote]
-https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/YouTube_remove_ads.plugin, tag=ytb, update-interval=-1, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/Semporia/TikTok-Unlock/master/Quantumult-X/TikTok-TW.conf, tag=TikTok, update-interval=-1, opt-parser=false, enabled=false
-https://raw.githubusercontent.com/app2smile/rules/master/module/tieba-qx.conf, tag=贴吧去广告-qx(>=iOS15), update-interval=-1, opt-parser=false, enabled=false
+;YouTube去广告，可以根据实际情况选择使用
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/YouTube_remove_ads.plugin, tag=ytbAD_1, update-interval=-1, opt-parser=true, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/YouTube_remove_ads_plan_b.plugin, tag=ytbAD_2, update-interval=-1, opt-parser=true, enabled=false
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/YouTubeAds.conf, tag=ytbAD_3, update-interval=-1, opt-parser=false, enabled=false
+;Netflix显示IMDB和豆瓣评分
 https://raw.githubusercontent.com/Orz-3/QuantumultX/master/Netflix_ratings.conf, tag=Netflix rating, update-interval=-1, opt-parser=false, enabled=true
+;YouTube字幕翻译-免去手动点击自动翻译
 https://raw.githubusercontent.com/Neurogram-R/Quantumult-X/main/snippet/YouTube-Dualsub.snippet, tag=Sub_Translate_YouTube, update-interval=-1, opt-parser=false, enabled=true
+;解锁Siri搜索和全局搜索
 https://raw.githubusercontent.com/VirgilClyne/iRingo/main/qxrewrite/Siri.qxrewrite, tag= iRingo for Siri & Search, update-interval=-1, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/shenshi.js, tag=绅士摄影, update-interval=-1, opt-parser=true, enabled=false
-https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js_Remote_Cookie.conf, tag=JD Cookie, update-interval=-1, opt-parser=false, enabled=false
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/YouTubeAds.conf, tag=油管视频广告, update-interval=-1, opt-parser=false, enabled=false
+;重定向&去广告
 https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Rewrite/Rewrite.list, tag=Rewrite (Stick Rules), update-interval=-1, opt-parser=false, enabled=true
+;APP破解
+https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/shenshi.js, tag=绅士摄影, update-interval=-1, opt-parser=true, enabled=false
 
 #
 [server_local]
 
 #
 [filter_local]
-host, cu.poloemby.xyz, direct
 ;ip6-cidr, 2001:4860:4860::8888/32, direct
 ;ip-cidr, 10.0.0.0/8, direct
 ;ip-cidr, 127.0.0.0/8, direct
@@ -99,17 +112,18 @@ host, cu.poloemby.xyz, direct
 ;geoip, cn, direct, force-cellular
 ;ip-asn, 6185, proxy
 final, FINAL
+
 #
 [rewrite_local]
-# 获取京东Cookie. 
-#^https:\/\/(api\.m|me-api)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?) url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
 #
 [task_local]
-# B站每日等级任务
 event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/geo_location.js, tag=GeoIP 查询, img-url=location.fill.viewfinder.system, enabled=true
 event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=流媒体解锁查询, img-url=checkmark.seal.system, enabled=true
+
 #
 [http_backend]
+
 #
 [mitm]
 hostname = 
