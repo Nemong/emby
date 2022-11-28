@@ -1,1 +1,121 @@
 [general]
+[general]
+profile_img_url =https://raw.githubusercontent.com/Nemong/profile-img/main/3-210GG55128.jpg
+resource_parser_url =https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
+;network_check_url =http://bing.com
+;server_check_url =http://www.google.com/generate_204
+;server_check_user_agent = Agent/1.0
+;server_check_timeout = 5000
+;doh_user_agent = Agent/1.0
+;geo_location_checker = http://www.example.com/json/, https://www.example.com/script.js
+running_mode_trigger = filter, filter, LINK_22E171:filter, HONOR_310P6R_5G:all_direct
+dns_exclusion_list = *.cmpassport.com, *.jegotrip.com.cn, *.icitymobile.mobi, id6.me
+;dns_reject_domain_behavior = loopback
+;ssid_suspended_list = LINK_22E174, HONOR_310P6R_5G
+;udp_whitelist = 53, 123, 1900, 80-443
+;udp_drop_list = 1900, 80
+;excluded_routes = 192.168.0.0/16, 172.16.0.0/12, 100.64.0.0/10, 10.0.0.0/8
+;icmp_auto_reply = true
+#
+[dns]
+;circumvent-ipv4-answer = 127.0.0.1, 0.0.0.0
+;circumvent-ipv6-answer = ::
+;prefer-doh3
+;no-system
+no-ipv6
+server = 119.29.29.29
+server = 223.5.5.5
+server = 114.114.114.114
+#
+[policy]
+static=EMBY, HONG KONG³, HONG KONG², 🇨🇳 台湾 01, 🇨🇳 台湾 02, 🇸🇬 新加坡 01, 🇸🇬 新加坡 02, 🇸🇬 新加坡 03, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Browser.png
+static=FINAL, direct, proxy, reject, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png
+static=GENERAL, HONG KONG¹, HONG KONG², SINGAPORE, JAPAN, UNITED STATES, TAIWAN, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Final.png
+static=GLOBAL MEDIA, 🇸🇬 新加坡 01, 🏴‍☠️ 懒人节点 01, JAPAN, HONG KONG¹, HONG KONG³, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Video.png
+static=TELEGRAM, GENERAL, JAPAN, SINGAPORE, TAIWAN, HONG KONG², HONG KONG³, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png
+available=HONG KONG¹, server-tag-regex=^(?!.*?[\#|D|PL]).*(香港|HK|Hong), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+url-latency-benchmark=HONG KONG², resource-tag-regex=prpr, server-tag-regex=\#, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+available=HONG KONG³, resource-tag-regex=nano, server-tag-regex=香港, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+url-latency-benchmark=SINGAPORE, server-tag-regex=新加坡|SG|Singapore, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
+available=JAPAN, server-tag-regex=^(?!.*?[\#|D|PL]).*(日本|JAPAN|JPN), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
+available=UNITED STATES, server-tag-regex=^(?!.*?[\#|D|PL]).*(美国|USA), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
+available=TAIWAN, server-tag-regex=^(?!.*?[\#|D|PL]).*(台湾|TW|Taiwan), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/China.png
+#
+[server_remote]
+https://subv3.nanoport.xyz/api/v1/client/subscribe?token=31caebe408414931474e49008866cc1c#emoji=2, tag=nano, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/CCCat.png, update-interval=-1, opt-parser=true, enabled=true
+https://api.prprcloud.life/ss/2428/HkehzQYmxM/noemoji#emoji=2, tag=prpr, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Prpr.png, update-interval=-1, opt-parser=true, enabled=true
+#
+[filter_remote]
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AppleMail/AppleMail.list, tag=Apple mail, force-policy=GENERAL, update-interval=-1, opt-parser=false, enabled=false
+https://raw.githubusercontent.com/Semporia/TikTok-Unlock/master/Quantumult-X/TikTok.list, tag=TikTok, force-policy=TAIWAN, update-interval=-1, opt-parser=false, enabled=false
+https://raw.githubusercontent.com/app2smile/rules/master/rule/tieba-ad-qx.list, tag=贴吧屏蔽域名dns查询, force-policy=reject, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/Nemong/emby/main/url?token=GHSAT0AAAAAAB3PW65C5ADJSZOQV2B3QWHQY4CYHBA, tag=Personal, force-policy=EMBY, update-interval=-1, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Direct/Direct.list#regout=mtalk|.com, tag=修正 (bm7), force-policy=direct, update-interval=-1, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Special.list, tag=Special=修正 (Stick Rules), force-policy=direct, update-interval=-1, opt-parser=false, enabled=false
+https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/AdBlock.list, tag=AdBlock (Stick Rules), force-policy=reject, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Speedtest.list#regout=fast, tag=Speedtest (Stick Rules), force-policy=proxy, update-interval=-1, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Spark/Spark.list, tag=Spark (bm7), force-policy=EMBY, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTube/YouTube.list, tag=YouTube (bm7), force-policy=UNITED STATES, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Google/Google.list, tag=Google (bm7), force-policy=GENERAL, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Telegram/Telegram.list, tag=Telegram, force-policy=TELEGRAM, update-interval=-1, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/PikPak/PikPak.list, tag=PikPak, force-policy=TELEGRAM, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Netflix/Netflix.list, tag=Netflix(bm7), force-policy=GLOBAL MEDIA, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AmazonPrimeVideo/AmazonPrimeVideo.list, tag=PrimeVideo(bm7), force-policy=UNITED STATES, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GlobalMedia/GlobalMedia.list#regout=y(t.be|outu)|google, tag=Global Media (bm7), force-policy=GLOBAL MEDIA, update-interval=-1, opt-parser=true, enabled=false
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Facebook/Facebook.list, tag=Meta, force-policy=GENERAL, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Microsoft/Microsoft.list, tag=Microsoft (bm7), force-policy=GENERAL, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Twitch/Twitch.list, tag=Twitch, force-policy=EMBY, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Steam/Steam.list, tag=Stsam, force-policy=proxy, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Epic/Epic.list, tag=Epicgames, force-policy=proxy, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Game/Game.list#regout=.cn, tag=Games, force-policy=GENERAL, update-interval=-1, opt-parser=true, enabled=false
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/ProxyLite/ProxyLite.list#regout=a(bc|chi|um|nat|ri|rti)|b(bc|cn)|c(ab|ntt|ov)|d(fr|tm)|e(add|bu|rl|ov|stre|sof|leg)|f(fp|ub)|g(are|p)|h(ncd|p|ul|oc)|i(by|mg.j|ps|tch|nten)|jtv|k(\*|ao|-t|em)|l(ln|ym|itu)|m(.co.j|eo|usc)|n(aw|dcl|n.|yt)|r(iot|tm)|s(ica|ndc|.te|kt|tag)|t(hk|tvn|v.a|vb|eles|x.m)|uk-|v(erc|erg|iu|ox-|un), tag=ProxyLite (bm7), force-policy=GENERAL, update-interval=-1, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Mainland.list, tag=Mainland (Stick Rules), force-policy=direct, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Mainland%20ASN.list, tag=Mainland ASN (Stick Rules), force-policy=direct, update-interval=-1, opt-parser=false, enabled=false
+#
+[rewrite_remote]
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/YouTube_remove_ads.plugin, tag=ytb, update-interval=-1, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/Semporia/TikTok-Unlock/master/Quantumult-X/TikTok-TW.conf, tag=TikTok, update-interval=-1, opt-parser=false, enabled=false
+https://raw.githubusercontent.com/app2smile/rules/master/module/tieba-qx.conf, tag=贴吧去广告-qx(>=iOS15), update-interval=-1, opt-parser=false, enabled=false
+https://raw.githubusercontent.com/Orz-3/QuantumultX/master/Netflix_ratings.conf, tag=Netflix rating, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/Neurogram-R/Quantumult-X/main/snippet/YouTube-Dualsub.snippet, tag=Sub_Translate_YouTube, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/VirgilClyne/iRingo/main/qxrewrite/Siri.qxrewrite, tag= iRingo for Siri & Search, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/shenshi.js, tag=绅士摄影, update-interval=-1, opt-parser=true, enabled=false
+https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js_Remote_Cookie.conf, tag=JD Cookie, update-interval=-1, opt-parser=false, enabled=false
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/YouTubeAds.conf, tag=油管视频广告, update-interval=-1, opt-parser=false, enabled=false
+https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Rewrite/Rewrite.list, tag=Rewrite (Stick Rules), update-interval=-1, opt-parser=false, enabled=true
+
+#
+[server_local]
+
+#
+[filter_local]
+host, cu.poloemby.xyz, direct
+;ip6-cidr, 2001:4860:4860::8888/32, direct
+;ip-cidr, 10.0.0.0/8, direct
+;ip-cidr, 127.0.0.0/8, direct
+;ip-cidr, 172.16.0.0/12, direct
+;ip-cidr, 192.168.0.0/16, direct
+;ip-cidr, 224.0.0.0/24, direct
+;geoip, cn, direct
+;geoip, cn, direct, force-cellular
+;ip-asn, 6185, proxy
+final, FINAL
+#
+[rewrite_local]
+# 获取京东Cookie. 
+#^https:\/\/(api\.m|me-api)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?) url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+#
+[task_local]
+# B站每日等级任务
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/geo_location.js, tag=GeoIP 查询, img-url=location.fill.viewfinder.system, enabled=true
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=流媒体解锁查询, img-url=checkmark.seal.system, enabled=true
+#
+[http_backend]
+#
+[mitm]
+hostname = 
+passphrase = A885951E
+p12 = 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
+;skip_validating_cert = false
+;force_sni_domain_name = false
+;simple_cert_hostname = non-existed-domain.com, *.non-connected-domain.com
