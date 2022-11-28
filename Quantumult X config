@@ -57,6 +57,7 @@ https://api.prprcloud.life/ss/2428/HkehzQYmxM/noemoji#emoji=2, tag=prpr, img-url
 
 ###
 [filter_remote]
+https://raw.githubusercontent.com/Nemong/for-own-use/main/ownuse, force-policy=EMBY, update-interval=-1, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Direct/Direct.list#regout=mtalk|.com, tag=修正 (bm7), force-policy=direct, update-interval=-1, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Special.list, tag=Special=修正 (Stick Rules), force-policy=direct, update-interval=-1, opt-parser=false, enabled=false
 https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/AdBlock.list, tag=AdBlock (Stick Rules), force-policy=reject, update-interval=-1, opt-parser=false, enabled=true
