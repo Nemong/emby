@@ -1,3 +1,7 @@
+#2022/11/28
+#使用了running_mode_trigger，即在蜂窝和一般WLAN下为FILTER，在特定WLAN下为ALLDIRECT
+#当在ALLDIRECT下运行时，只有【分流】会暂停，复写、脚本等功能正常运转
+
 ###
 [general]
 ;network_check_url =http://bing.com
