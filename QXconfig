@@ -26,7 +26,6 @@ profile_img_url =https://raw.githubusercontent.com/Nemong/profile-img/main/3-210
 resource_parser_url =https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
 running_mode_trigger = filter, filter, LINK_22E171:filter, HONOR_310P6R_5G:all_direct
 
-
 ###
 [dns]
 ;circumvent-ipv4-answer = 127.0.0.1, 0.0.0.0
@@ -61,7 +60,7 @@ https://api.prprcloud.life/ss/2428/HkehzQYmxM/noemoji#emoji=2, tag=prpr, img-url
 
 ###
 [filter_remote]
-https://raw.githubusercontent.com/Nemong/for-own-use/main/ownuse, force-policy=EMBY, update-interval=-1, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/Nemong/for-own-use/main/ownuse, tag=Ownuse, force-policy=EMBY, update-interval=-1, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Special.list#regout=dler, tag=Special=修正 (Stick Rules), force-policy=direct, update-interval=-1, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/AdBlock.list, tag=AdBlock (Stick Rules), force-policy=reject, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Direct/Direct.list, tag=修正 (bm7), force-policy=direct, update-interval=-1, opt-parser=true, enabled=false
