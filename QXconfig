@@ -106,13 +106,6 @@ https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/shenshi.js, tag=绅
 
 ###
 [filter_local]
-host-KEYWORD,github
-host-KEYWORD,prpr
-host-KEYWORD,nanoport
-host-KEYWORD,emby
-host-SUFFIX,misakaf.org
-host-SUFFIX,aaa.ax
-host,twvideo.toolsapi.workers.devfinal, FINAL
 final, FINAL
 
 ###
