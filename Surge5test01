@@ -1,0 +1,104 @@
+[General]
+# > 网络访问延迟测速URL
+internet-test-url = http://cp.cloudflare.com/generate_204
+# > 代理延迟测速URL
+proxy-test-url = http://cp.cloudflare.com/generate_204
+# > 测试超时（秒）
+test-timeout = 3
+# 
+# ---GeoIP数据库---
+geoip-maxmind-url = https://raw.githubusercontent.com/JMVoid/ipip2mmdb/release/Country.mmdb
+# 
+# ---WiFi助理---
+# 在Wi-Fi网络不佳时尝试使用数据网络建立连接
+# ture=开启，false=关闭
+wifi-assist = false
+# 
+# ---WiFi访问---
+# > 允许WiFi访问
+# >> iOS，若允许远程访问将false改为true
+allow-wifi-access = false
+wifi-access-http-port = 6152
+wifi-access-socks5-port = 6153
+# 
+# ---兼容性设置---
+# > TLS引擎
+# 选择OpenSSL或者Network.Framework，可开启TLS 1.3支持
+# OpenSSL更稳定，Network.Framework可提供更多功能
+# tls-provider = Network.Framework
+# > Network framwork
+network-framework = false
+# > IPv6 支持（默认关闭）
+ipv6 = false
+# > 兼容模式(仅iOS)
+# compatibility-mode = 0
+# > 排除简单主机名
+exclude-simple-hostnames = true
+# > 跳过代理
+skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local, *.crashlytics.com, passenger.t3go.cn
+# 
+# ---DNS 服务器---
+# 如无必要不建议使用DNS over HTTPS
+dns-server = system, 119.29.29.29, 119.28.28.28, 1.2.4.8, 182.254.116.116
+# > 从/etc/hosts读取DNS记录
+read-etc-hosts = true
+# 
+# ---高级设置---
+# > 日志级别
+loglevel = warning
+# > 当遇到REJECT策略时返回错误页
+show-error-page-for-reject = true
+# > Always Real IP Hosts
+# 当Surge VIF处理DNS问题时，要求Surge返回真实IP地址
+ipv6-vif = disabled
+# > TCP Force HTTP Hosts
+# 让Surge把TCP连接当作HTTP请求来处理
+# Surge HTTP引擎将处理这些请求
+# 所有的高级功能，如捕获、重写和脚本等都可以使用
+# > VIF Excluded Routes
+# Surge VIF 只能处理 TCP 和 UDP 协议，使用此选项可以绕过特定的 IP 范围，允许所有流量通过
+# > UDP转发
+# 如果没有代理服务器支持UDP转发
+# 可修改为direct或注释本条
+# 需注意同一目标主机名TCP请求与UDP请求的源地址不同所造成的隐私及安全风险
+# udp-policy-not-supported-behaviour = reject
+
+[Replica]
+hide-apple-request = 1
+hide-crash-reporter-request = 0
+hide-udp = 0
+
+[Proxy Group]
+FINAL = select, DIRECT, GENERAL, no-alert=0, hidden=0, include-all-proxies=0, update-interval=-1
+JAPAN = fallback, no-alert=0, hidden=0, include-all-proxies=0, policy-path=https://api.prprcloud.life/node-list/2428/HkehzQYmxM/, update-interval=-1, policy-regex-filter=日本
+GENERAL = select, no-alert=0, hidden=0, include-all-proxies=0, policy-path=https://api.prprcloud.life/node-list/2428/HkehzQYmxM/, update-interval=-1
+TAIWAN = fallback, no-alert=0, hidden=0, include-all-proxies=0, update-interval=-1, policy-regex-filter=台湾, policy-path=https://api.prprcloud.life/node-list/2428/HkehzQYmxM/
+NETFLIX = select, HONG KONG, GENERAL, no-alert=0, hidden=0, include-all-proxies=0, policy-path=https://api.prprcloud.life/node-list/2428/HkehzQYmxM/, update-interval=-1, policy-regex-filter=新加坡 01|美国 01
+SINGAPORE = select, no-alert=0, hidden=0, include-all-proxies=0, update-interval=-1, policy-regex-filter=新加坡, policy-path=https://api.prprcloud.life/node-list/2428/HkehzQYmxM/
+UNITED STATES = select, no-alert=0, hidden=0, include-all-proxies=0, update-interval=-1, policy-regex-filter=美国, policy-path=https://api.prprcloud.life/node-list/2428/HkehzQYmxM/
+HONG KONG = select, no-alert=0, hidden=0, include-all-proxies=0, update-interval=-1, policy-regex-filter=^(?!.*?[\#|D]).*(香港|HK|Hong), policy-path=https://api.prprcloud.life/node-list/2428/HkehzQYmxM/
+
+[Rule]
+SUBNET,SSID:HONOR_310P6R_5G,DIRECT
+# DOMAIN,mesu.apple.com,REJECT // 屏蔽iOS更新
+RULE-SET,https://raw.githubusercontent.com/Nemong/emby/main/url,HONG KONG,update-interval=-1
+RULE-SET,SYSTEM,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AdvertisingLite/AdvertisingLite.list,REJECT,update-interval=-1
+DOMAIN-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AdvertisingLite/AdvertisingLite_Domain.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list,UNITED STATES,update-interval=-1
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list,GENERAL,update-interval=-1
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Netflix/Netflix.list,NETFLIX,update-interval=-1
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list,GENERAL,update-interval=-1
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list,GENERAL,update-interval=-1
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Amazon/Amazon.list,GENERAL,update-interval=-1
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ProxyLite/ProxyLite.list,GENERAL,update-interval=-1
+GEOIP,CN,DIRECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/China/China.list,DIRECT,update-interval=-1
+FINAL,FINAL
+
+[MITM]
+tcp-connection = true
+h2 = true
+ca-passphrase = 7E87D73C
+ca-p12 = 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
+
