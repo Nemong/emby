@@ -1,0 +1,9 @@
+#!name=Airport Info Panel
+#!desc=prprCloud检测 @Nebulosa-Cat
+#!system=ios
+
+[Panel]
+Sub_info = script-name=Sub_info
+
+[Script]
+Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Fapi.prprcloud.life%2Fss%2F2428%2FHkehzQYmxM%2F&reset_day=1&title=prprCloud
