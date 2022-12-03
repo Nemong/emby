@@ -1,4 +1,4 @@
-## https://raw.githubusercontent.com/Nemong/forown/main/Surge%232
+#!MANAGED-CONFIG https://raw.githubusercontent.com/Nemong/forown/main/Surge%232
 
 [General]
 geoip-maxmind-url = https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb
