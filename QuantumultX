@@ -92,7 +92,7 @@ https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/YouTube_remove_
 https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/YouTube_remove_ads_plan_b.plugin, tag=ytbAD_2, update-interval=-1, opt-parser=true, enabled=false
 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/YouTubeAds.conf, tag=ytbAD_3, update-interval=-1, opt-parser=false, enabled=false
 ;Blackmatrx7去广告重写-792条
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/AdvertisingLite/AdvertisingLite.conf, tag=AdLite (bm7), update-interval=-1, opt-parser=false, enabled=false
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/AdvertisingLite/AdvertisingLite.conf, tag=AdLite (bm7), update-interval=-1, opt-parser=false, enabled=true
 ;毒奶去广告
 https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adblock4limbo.conf, tag=毒奶去广告, update-interval=-1, opt-parser=false, enabled=false
 ;Stick Rules重定向&去广告
