@@ -61,6 +61,9 @@ FINAL,FINAL
 [Host]
 ip-api.com = 208.95.112.1
 
+[URL Rewrite]
+^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+
 [MITM]
 tcp-connection = true
 hostname = www.google.cn
