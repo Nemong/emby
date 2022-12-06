@@ -138,7 +138,7 @@ host, mesu.apple.com, reject
 host, gdmf.apple.com, reject
 host, updates-http.cdn-apple.com, reject
 host, xp.apple.com, reject
-geoip, CN, direct
+;geoip, CN, direct
 final, FINAL
 
 ###
