@@ -38,20 +38,20 @@ server = 223.5.5.5
 server = 114.114.114.114
 server = 8.8.8.8
 
-### url-latency-benchmark可选参数：check-interval=600, tolerance=0, alive-checking=false，置于server-tag-regex后
+### url-latency-benchmark可选参数：check-interval=900, tolerance=0, alive-checking=false，置于server-tag-regex后，img-url前
 [policy]
 static=EMBY, HONG KONG², HONG KONG³, 🇨🇳 台湾 01, 🇨🇳 台湾 02, 🇸🇬 新加坡 01, 🇸🇬 新加坡 02, 🇸🇬 新加坡 03, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Browser.png
 static=FINAL, direct, proxy, reject, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png
 static=GENERAL, HONG KONG¹, HONG KONG², SINGAPORE, JAPAN, UNITED STATES, TAIWAN, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Final.png
 static=GLOBAL MEDIA, 🇸🇬 新加坡 01, 🏴‍☠️ 懒人节点 01, JAPAN, HONG KONG¹, HONG KONG², HONG KONG³, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Video.png
 static=TELEGRAM, GENERAL, JAPAN, SINGAPORE, TAIWAN, HONG KONG², HONG KONG³, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png
-available=HONG KONG¹, server-tag-regex=^(?!.*?[\#|D|PL]).*(香港|HK|Hong), check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+available=HONG KONG¹, server-tag-regex=^(?!.*?[\#|PL]).*(香|HK|Hong), check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
 available=HONG KONG², server-tag-regex=\#, check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
-available=HONG KONG³, resource-tag-regex=nano, server-tag-regex=香港, check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
-available=SINGAPORE, server-tag-regex=新加坡|SG|Singapore, check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
-available=JAPAN, server-tag-regex=^(?!.*?[\#|D|PL]).*(日本|JAPAN|JPN), check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
-available=UNITED STATES, server-tag-regex=^(?!.*?[\#|D|PL]).*(美国|USA), check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
-available=TAIWAN, server-tag-regex=^(?!.*?[\#|D|PL]).*(台湾|TW|Taiwan), check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/China.png
+available=HONG KONG³, server-tag-regex=(?=.*[PL])^(?=.*香)^.*$, check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+available=SINGAPORE, server-tag-regex=^(?!.*?[\#|PL]).*(新|SG|Singapore), check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
+available=JAPAN, server-tag-regex=^(?!.*?[\#|PL]).*(日|JP|Japan), check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
+available=UNITED STATES, server-tag-regex=^(?!.*?[\#|PL]).*(美|US|United), check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
+available=TAIWAN, server-tag-regex=^(?!.*?[\#|PL]).*(台|TW|Taiwan), check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/China.png
 
 ###
 [server_remote]
