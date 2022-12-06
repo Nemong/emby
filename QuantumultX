@@ -4,10 +4,7 @@
 
 ###
 [general]
-;network_check_url =http://bing.com
-;server_check_url =http://www.google.com/generate_204
 ;server_check_user_agent = Agent/1.0
-;server_check_timeout = 5000
 ;doh_user_agent = Agent/1.0
 ;dns_reject_domain_behavior = loopback
 ;ssid_suspended_list = LINK_22E174, HONOR_310P6R_5G
@@ -15,14 +12,17 @@
 ;udp_drop_list = 1900, 80
 ;excluded_routes = 192.168.0.0/16, 172.16.0.0/12, 100.64.0.0/10, 10.0.0.0/8
 ;icmp_auto_reply = true
-;geo_location_checker = http://www.example.com/json/, https://www.example.com/script.js
 
 ;DNS 排除列表
 ;dns_exclusion_list 包含了禁用占位符 IP (240.*) 的域，不在 dns_exclusion_list 中的域都启用了占位符 IP，并打开了 resolve-on-remote 设置。
 ;dns exclusion list中的域名将不使用fake-ip方式. 其它域名则全部采用 fake-ip 及远程解析的模式
 dns_exclusion_list = *.lan, cable.auth.com, *.msftconnecttest.com, *.msftncsi.com, network-test.debian.org, detectportal.firefox.com, resolver1.opendns.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, stun.*, global.turn.twilio.com, global.stun.twilio.com, localhost.*.qq.com, *.logon.battlenet.com.cn, *.logon.battle.net, *.blzstatic.cn, music.163.com, *.music.163.com, *.126.net, musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, *.kuwo.cn, api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, *.y.qq.com, streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, *.xiami.com, *.music.migu.cn, music.migu.cn, proxy.golang.org, *.mcdn.bilivideo.cn, *.cmpassport.com, id6.me, open.e.189.cn, mdn.open.wo.cn, opencloud.wostore.cn, auth.wosms.cn, *.jegotrip.com.cn, *.icitymobile.mobi, *.pingan.com.cn, *.cmbchina.com, pool.ntp.org, *.pool.ntp.org, ntp.*.com, time.*.com, ntp?.*.com, time?.*.com, time.*.gov, time.*.edu.cn, *.ntp.org.cn, PDC._msDCS.*.*, DC._msDCS.*.*, GC._msDCS.*.*
 
+network_check_url = http://connectivitycheck.platform.hicloud.com/generate_204
+server_check_url = http://www.v2ex.com/generate_204
+server_check_timeout = 20
 profile_img_url = https://raw.githubusercontent.com/Nemong/profile-img/main/3-210GG55128.jpg
+geo_location_checker=http://ip-api.com/json/, https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/GeoLocationChecker/QuantumultX/IP-API.js
 resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
 running_mode_trigger = filter, filter, LINK_22E171:filter, HONOR_310P6R_5G:all_direct
 
@@ -36,21 +36,22 @@ no-ipv6
 server = 119.29.29.29
 server = 223.5.5.5
 server = 114.114.114.114
+server = 8.8.8.8
 
-###
+### url-latency-benchmark可选参数：check-interval=600, tolerance=0, alive-checking=false，置于server-tag-regex后
 [policy]
 static=EMBY, HONG KONG², HONG KONG³, 🇨🇳 台湾 01, 🇨🇳 台湾 02, 🇸🇬 新加坡 01, 🇸🇬 新加坡 02, 🇸🇬 新加坡 03, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Browser.png
 static=FINAL, direct, proxy, reject, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png
 static=GENERAL, HONG KONG¹, HONG KONG², SINGAPORE, JAPAN, UNITED STATES, TAIWAN, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Final.png
 static=GLOBAL MEDIA, 🇸🇬 新加坡 01, 🏴‍☠️ 懒人节点 01, JAPAN, HONG KONG¹, HONG KONG², HONG KONG³, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Video.png
 static=TELEGRAM, GENERAL, JAPAN, SINGAPORE, TAIWAN, HONG KONG², HONG KONG³, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png
-available=HONG KONG¹, server-tag-regex=^(?!.*?[\#|D|PL]).*(香港|HK|Hong), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
-available=HONG KONG², resource-tag-regex=prpr, server-tag-regex=\#, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
-available=HONG KONG³, resource-tag-regex=nano, server-tag-regex=香港, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
-available=SINGAPORE, server-tag-regex=新加坡|SG|Singapore, check-interval=600, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
-available=JAPAN, server-tag-regex=^(?!.*?[\#|D|PL]).*(日本|JAPAN|JPN), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
-available=UNITED STATES, server-tag-regex=^(?!.*?[\#|D|PL]).*(美国|USA), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
-available=TAIWAN, server-tag-regex=^(?!.*?[\#|D|PL]).*(台湾|TW|Taiwan), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/China.png
+available=HONG KONG¹, server-tag-regex=^(?!.*?[\#|D|PL]).*(香港|HK|Hong), check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+available=HONG KONG², server-tag-regex=\#, check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+available=HONG KONG³, resource-tag-regex=nano, server-tag-regex=香港, check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+available=SINGAPORE, server-tag-regex=新加坡|SG|Singapore, check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
+available=JAPAN, server-tag-regex=^(?!.*?[\#|D|PL]).*(日本|JAPAN|JPN), check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
+available=UNITED STATES, server-tag-regex=^(?!.*?[\#|D|PL]).*(美国|USA), check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
+available=TAIWAN, server-tag-regex=^(?!.*?[\#|D|PL]).*(台湾|TW|Taiwan), check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/China.png
 
 ###
 [server_remote]
