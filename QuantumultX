@@ -1,6 +1,9 @@
-#2022/11/28
+#2022/11/28 - 2022/12/07
+#Quantumult X 1.1.0-767
+#参考 https://github.com/KOP-XIAO/QuantumultX/blob/master/QuantumultX_Profiles.conf
 #使用了running_mode_trigger，即在蜂窝和一般WLAN下为FILTER，在特定WLAN下为ALLDIRECT
-#当在ALLDIRECT下运行时，只有【分流】会暂停，复写、脚本等功能正常运转
+#在ALLDIRECT下运行，【分流】会暂停，复写、脚本等功能正常运转，留学需借助路由器
+#general里的时间单位为: ms
 
 ###
 [general]
@@ -20,7 +23,7 @@ dns_exclusion_list = *.lan, cable.auth.com, *.msftconnecttest.com, *.msftncsi.co
 
 network_check_url = http://connectivitycheck.platform.hicloud.com/generate_204
 server_check_url = http://www.v2ex.com/generate_204
-server_check_timeout = 20
+server_check_timeout = 2000
 profile_img_url = https://raw.githubusercontent.com/Nemong/profile-img/main/3-210GG55128.jpg
 geo_location_checker=http://ip-api.com/json/, https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/GeoLocationChecker/QuantumultX/IP-API.js
 resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
@@ -38,20 +41,22 @@ server = 223.5.5.5
 server = 114.114.114.114
 server = 8.8.8.8
 
-### url-latency-benchmark可选参数：check-interval=900, tolerance=0, alive-checking=false，置于server-tag-regex后，img-url前
+### 
+// url-latency-benchmark参数：check-interval=900, tolerance=0, alive-checking=false，置于server-tag-regex后，img-url前
+// 如果没有网络请求，则表明策略处于空闲阶段。如果alive-checking为true，那么即使策略处于空闲状态，仍会按照间隔时间启动测试并考虑公差(tolerance)。
 [policy]
 static=EMBY, HONG KONG², HONG KONG³, 🇨🇳 台湾 01, 🇨🇳 台湾 02, 🇸🇬 新加坡 01, 🇸🇬 新加坡 02, 🇸🇬 新加坡 03, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Browser.png
 static=FINAL, direct, proxy, reject, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png
 static=GENERAL, HONG KONG¹, HONG KONG², SINGAPORE, JAPAN, UNITED STATES, TAIWAN, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Final.png
 static=GLOBAL MEDIA, 🇸🇬 新加坡 01, 🏴‍☠️ 懒人节点 01, JAPAN, HONG KONG¹, HONG KONG², HONG KONG³, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Video.png
 static=TELEGRAM, GENERAL, JAPAN, SINGAPORE, TAIWAN, HONG KONG², HONG KONG³, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png
-available=HONG KONG¹, server-tag-regex=^(?!.*?[\#|PL]).*(香|HK|Hong), check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
-available=HONG KONG², server-tag-regex=\#, check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
-available=HONG KONG³, server-tag-regex=(?=.*[PL])^(?=.*香)^.*$, check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
-available=SINGAPORE, server-tag-regex=^(?!.*?[\#|PL]).*(新|SG|Singapore), check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
-available=JAPAN, server-tag-regex=^(?!.*?[\#|PL]).*(日|JP|Japan), check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
-available=UNITED STATES, server-tag-regex=^(?!.*?[\#|PL]).*(美|US|United), check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
-available=TAIWAN, server-tag-regex=^(?!.*?[\#|PL]).*(台|TW|Taiwan), check-interval=900, tolerance=0, alive-checking=false, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/China.png
+available=HONG KONG¹, server-tag-regex=^(?!.*?[\#|PL]).*(香|HK|Hong), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+available=HONG KONG², server-tag-regex=\#, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+available=HONG KONG³, server-tag-regex=(?=.*[PL])^(?=.*香)^.*$, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+available=SINGAPORE, server-tag-regex=^(?!.*?[\#|PL]).*(新|SG|Singapore), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
+available=JAPAN, server-tag-regex=^(?!.*?[\#|PL]).*(日|JP|Japan), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
+available=UNITED STATES, server-tag-regex=^(?!.*?[\#|PL]).*(美|US|United), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
+available=TAIWAN, server-tag-regex=^(?!.*?[\#|PL]).*(台|TW|Taiwan), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/China.png
 
 ###
 [server_remote]
@@ -83,7 +88,7 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Quant
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Game/Game.list#regout=.cn, tag=Games (bm7), force-policy=proxy, update-interval=-1, opt-parser=true, enabled=false
 
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/ProxyLite/ProxyLite.list#regout=a(bc|chi|um|nat|ri|rti)|b(bc|cn)|c(ab|ntt|ov)|d(fr|tm)|e(add|bu|rl|ov|stre|sof|leg)|f(fp|ub)|g(are|p)|h(ncd|p|ul|oc)|i(by|mg.j|ps|tch|nten)|jtv|k(\*|ao|-t|em)|l(ln|ym|itu)|m(.co.j|eo|usc)|n(aw|dcl|n.|yt)|r(iot|tm)|s(ica|ndc|.te|kt|tag)|t(hk|tvn|v.a|vb|eles|x.m)|uk-|v(erc|erg|iu|ox-|un), tag=ProxyLite (bm7), force-policy=GENERAL, update-interval=-1, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Mainland.list, tag=Mainland (Stick Rules), force-policy=direct, update-interval=-1, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Mainland.list, tag=Mainland (Stick Rules), force-policy=direct, update-interval=-1, opt-parser=false, enabled=false
 https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Mainland%20ASN.list, tag=Mainland ASN (Stick Rules), force-policy=direct, update-interval=-1, opt-parser=false, enabled=false
 
 ###
@@ -113,13 +118,26 @@ https://raw.githubusercontent.com/yqc007/QuantumultX/master/SparkMailProCrack.js
 [server_local]
 
 ###
+// 如开启其他设置中的  “分流匹配优化” 选项，则匹配优先级为👇
+// host > host-suffix > host-keyword(wildcard) > geoip = ip-cidr > user-agennt
+
+// 强制分流走蜂窝网络
+;host-suffix, googleapis.com, proxy, force-cellular
+// 让分流走蜂窝网络跟 Wi-Fi 中的优选结果
+;host-suffix, googleapis.com, proxy, multi-interface
+// 让分流走蜂窝网络跟 Wi-Fi 中的负载均衡，提供更大带宽出入接口
+;host-suffix, googleapis.com, proxy, multi-interface-balance
+// 指定分流走特定网络接口
+;host-suffix, googleapis.com, proxy, via-interface=pdp_ip0
+// %TUN% 参数，回传给 Quantumult X 接口，可用于曲线实现代理链功能
+;host-suffix, example.com, ServerA, via-interface=%TUN%
+;ip-cidr, ServerA's IP Range, ServerB
 [filter_local]
-;Block iOS system updates
+host-keyword, epicgames, proxy, force-cellular
 host, mesu.apple.com, reject
 host, gdmf.apple.com, reject
 host, updates-http.cdn-apple.com, reject
 host, xp.apple.com, reject
-
 geoip, CN, direct
 final, FINAL
 
