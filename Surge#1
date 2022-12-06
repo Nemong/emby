@@ -1,4 +1,5 @@
-#!MANAGED-CONFIG https://raw.githubusercontent.com/Nemong/forown/main/Surge%231
+#!MANAGED-CONFIG https://raw.githubusercontent.com/Nemong/forown/main/Surge%231 strict=true
+# 通过REJECT策略和REWRITE仅实现去广告功能,留学需要搭配路由器
 //////
 
 [General]
@@ -23,14 +24,15 @@ hide-udp = 0
 keyword-filter-type = none
 
 [Proxy Group]
-ADVERTISING = select, REJECT, DIRECT, no-alert=0, hidden=0, include-all-proxies=0
-UNITED STATES = select, policy-path=https://api.prprcloud.life/node-list/2428/HkehzQYmxM/noemoji, update-interval=-1, policy-regex-filter=^(?!.*?[\#|IEPL]).*(美|USA), no-alert=0, hidden=0, include-all-proxies=0
+UNITED STATES = select, policy-path=https://api.prprcloud.life/node-list/2428/HkehzQYmxM/noemoji, update-interval=-1, policy-regex-filter=^(?!.*?[\#|IEPL]).*(美|US|United), no-alert=0, hidden=0, include-all-proxies=0
 HONG KONG¹ = select, policy-path=https://api.prprcloud.life/node-list/2428/HkehzQYmxM/noemoji, update-interval=-1, policy-regex-filter=^(?!.*?[\#|IEPL]).*(香港|HK|Hong), no-alert=0, hidden=0, include-all-proxies=0
 HONG KONG² = select, policy-path=https://api.prprcloud.life/node-list/2428/HkehzQYmxM/noemoji, update-interval=-1, policy-regex-filter=\#, no-alert=1, hidden=0, include-all-proxies=0
-HONG KONG³ = select, policy-path=https://subv3.nanoport.xyz/api/v1/client/subscribe?token=31caebe408414931474e49008866cc1c, update-interval=-1, no-alert=0, hidden=0, include-all-proxies=0, policy-regex-filter=香港
-SINGAPORE = select, policy-path=https://api.prprcloud.life/node-list/2428/HkehzQYmxM/noemoji, update-interval=-1, policy-regex-filter=^(?!.*?[\#|IEPL]).*(新|Singapore), no-alert=0, hidden=0, include-all-proxies=0
-JAPAN = select, policy-path=https://api.prprcloud.life/node-list/2428/HkehzQYmxM/noemoji, update-interval=-1, policy-regex-filter=^(?!.*?[\#|IEPL]).*(日|Japan), no-alert=0, hidden=0, include-all-proxies=0
-TAIWAN = select, policy-path=https://api.prprcloud.life/node-list/2428/HkehzQYmxM/noemoji, update-interval=-1, policy-regex-filter=^(?!.*?[\#|IEPL]).*(台|Taiwan), no-alert=0, hidden=0, include-all-proxies=0
+HONG KONG³ = select, policy-path=https://subv3.nanoport.xyz/api/v1/client/subscribe?token=31caebe408414931474e49008866cc1c, update-interval=-1, policy-regex-filter=香港, no-alert=0, hidden=0, include-all-proxies=0
+SINGAPORE = select, policy-path=https://api.prprcloud.life/node-list/2428/HkehzQYmxM/noemoji, update-interval=-1, policy-regex-filter=^(?!.*?[\#|IEPL]).*(新|SG|Singapore|), no-alert=0, hidden=0, include-all-proxies=0
+JAPAN = select, policy-path=https://api.prprcloud.life/node-list/2428/HkehzQYmxM/noemoji, update-interval=-1, policy-regex-filter=^(?!.*?[\#|IEPL]).*(日|JP|Japan), no-alert=0, hidden=0, include-all-proxies=0
+TAIWAN = select, policy-path=https://api.prprcloud.life/node-list/2428/HkehzQYmxM/noemoji, update-interval=-1, policy-regex-filter=^(?!.*?[\#|IEPL]).*(台|TW|Taiwan), no-alert=0, hidden=0, include-all-proxies=0
+ADVERTISING = select, REJECT, DIRECT, no-alert=0, hidden=0, include-all-proxies=0
+
 
 [Rule]
 # RULE-SET,LAN,DIRECT
@@ -55,8 +57,10 @@ RULE-SET,https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adblock4l
 # RULE-SET,https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Domestic.list,DIRECT,update-interval=-1
 FINAL,FINAL
 
-[URL Rewrite]
+[Host]
+ip-api.com = 208.95.112.1
 
+[URL Rewrite]
 
 [MITM]
 tcp-connection = true
@@ -65,11 +69,11 @@ ca-p12 = MIIKPAIBAzCCCgYGCSqGSIb3DQEHAaCCCfcEggnzMIIJ7zCCBF8GCSqGSIb3DQEHBqCCBFA
 
 [Script]
 # prprCloud订阅信息
-Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=-1,argument=url=https%3A%2F%2Fapi.prprcloud.life%2Fss%2F2428%2FHkehzQYmxM%2F&reset_day=19&title=prprCloud
+Sub_info = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=-1,argument=url=https%3A%2F%2Fapi.prprcloud.life%2Fss%2F2428%2FHkehzQYmxM%2F&reset_day=19&title=prprCloud
 # 流媒体区域检测
 streamcheck = type=generic,script-path=https://raw.githubusercontent.com/ptntp/self-rule/main/Panel/streamcheck.js,script-update-interval=-1
 # 网络信息面板
-net-info-panel.js = script-path=https://raw.githubusercontent.com/Nebulosa-Cat/Surge/main/Panel/Network-Info/net-info-panel.js,type=generic,timeout=30,script-update-interval=-1
+net-info-panel.js = script-path=https://raw.githubusercontent.com/Nebulosa-Cat/Surge/main/Panel/Network-Info/net-info-panel.js,type=generic,timeout=8,script-update-interval=-1
 
 [Panel]
 # prprCloud订阅信息
