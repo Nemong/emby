@@ -34,7 +34,7 @@ running_mode_trigger = filter, filter, LINK_22E171:filter, HONOR_310P6R_5G:all_d
 ;circumvent-ipv4-answer = 127.0.0.1, 0.0.0.0
 ;circumvent-ipv6-answer = ::
 ;prefer-doh3
-;no-system
+no-system
 no-ipv6
 server = 119.29.29.29
 server = 223.5.5.5
