@@ -27,7 +27,7 @@ server_check_timeout = 2000
 profile_img_url = https://raw.githubusercontent.com/Nemong/profile-img/main/3-210GG55128.jpg
 geo_location_checker=http://ip-api.com/json/, https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/GeoLocationChecker/QuantumultX/IP-API.js
 resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
-;running_mode_trigger = filter, filter, LINK_22E171:filter, HONOR_310P6R_5G:all_direct
+;running_mode_trigger = filter, filter, LINK_22E171:filter, B2_5G:all_direct
 
 ###
 [dns]
@@ -89,8 +89,6 @@ https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Mainlan
 ;YouTube去广告，可以根据实际情况选择使用
 https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/QuantumultX/Rewrite/YouTube_remove_ads.snippet, tag=ytbAD_1, update-interval=-1, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/YouTubeAds.conf, tag=ytbAD_3, update-interval=-1, opt-parser=false, enabled=false
-;小红书去广告
-https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/QuantumultX/Rewrite/RedPaper_remove_ads.snippet,, tag=xhsAD, update-interval=-1, opt-parser=false, enabled=true
 ;毒奶去广告
 https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adblock4limbo.conf, tag=毒奶去广告, update-interval=-1, opt-parser=false, enabled=false
 ;Blackmatrx7重写去广告
