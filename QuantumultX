@@ -47,11 +47,11 @@ server = 8.8.8.8
 [policy]
 static=EMBY, HONG KONG², 🇨🇳 台湾 01, 🇨🇳 台湾 02, 🇸🇬 新加坡 01, 🇸🇬 新加坡 02, 🇸🇬 新加坡 03, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Browser.png
 static=FINAL, direct, proxy, reject, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png
-static=GENERAL, HONG KONG¹, SINGAPORE, JAPAN, UNITED STATES, TAIWAN, 🇭🇰 香港 05#, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Final.png
-static=GLOBAL MEDIA, 🇸🇬 新加坡 01, 🏴‍☠️ 懒人节点 01, 🇭🇰 香港 05#, HONG KONG¹, HONG KONG², img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Video.png
-static=TELEGRAM, HONG KONG², GENERAL, JAPAN, SINGAPORE, TAIWAN, 🇭🇰 香港 05#, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png
+static=GENERAL, HONG KONG¹, SINGAPORE, JAPAN, UNITED STATES, TAIWAN, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Final.png
+static=GLOBAL MEDIA, 🇸🇬 新加坡 01, 🏴‍☠️ 懒人节点 01, HONG KONG¹, HONG KONG², img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Video.png
+static=TELEGRAM, HONG KONG², GENERAL, JAPAN, SINGAPORE, TAIWAN, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png
 round-robin=HONG KONG¹, server-tag-regex=^(?!.*?[\#|PL|杨]).*(香|HK|Hong), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
-available=HONG KONG², resource-tag-regex=na, server-tag-regex=香, img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+available=HONG KONG², resource-tag-regex=na, server-tag-regex=^(?!.*?30).*(香港), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
 available=SINGAPORE, server-tag-regex=^(?!.*?[\#|PL]).*(新|SG|Singapore), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
 available=JAPAN, server-tag-regex=^(?!.*?[\#|PL]).*(日|JP|Japan), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
 available=UNITED STATES, server-tag-regex=^(?!.*?[\#|PL]).*(美|US|United), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
@@ -65,8 +65,6 @@ https://api.prprcloud.life/ss/2428/HkehzQYmxM/noemoji#emoji=2, tag=prpr, img-url
 ###
 [filter_remote]
 https://raw.githubusercontent.com/Nemong/forownuse/main/rules,  tag=Ownuse, force-policy=EMBY, update-interval=-1, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Special.list#regout=dler, tag=Special (Stick Rules), force-policy=direct, update-interval=-1, opt-parser=true, enabled=false
-https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/AdBlock.list, tag=AdBlock (Stick Rules), force-policy=reject, update-interval=-1, opt-parser=false, enabled=false
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Direct/Direct.list, tag=修正 (bm7), force-policy=direct, update-interval=-1, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AdvertisingLite/AdvertisingLite.list, tag=AdLite (bm7), force-policy=reject, update-interval=-1, opt-parser=false, enabled=true
 https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adblock4limbo.list, tag=毒奶去广告, force-policy=reject, update-interval=-1, opt-parser=true, enabled=false
