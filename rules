@@ -1,12 +1,14 @@
-#2022/12/28
+#2024/05/29
 #Loon Surge直接引用，Quantumult X需打开解析器
 
 DOMAIN-KEYWORD,github
 DOMAIN-KEYWORD,prpr
 DOMAIN-KEYWORD,nanoport
 
-DOMAIN-KEYWORD,18comic
-DOMAIN-KEYWORD,emby
-DOMAIN-KEYWORD,misty
+#emby
+DOMAIN-KEYWORD,embymv
+DOMAIN,stream.ntrrr.top
 DOMAIN-SUFFIX,789.123456.al
-DOMAIN,twvideo.toolsapi.workers.dev
+
+#other
+DOMAIN-KEYWORD,18comic
